@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/style.css">
+    <title>APOLO</title>
+</head>
+<body>
+<!--Barra lateral-->
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                   <img src="../IMG/logo.png"> 
+                    <h2>APOLO<span class="danger">SOFT</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="Index.html">
+                    <span class="material-icons-sharp">person_outline</span> 
+                    <h3>Perfil</h3>
+                </a>
+                <a href="IndexPublicarActividad.html">
+                    <span class="material-icons-sharp">dashboard</span> 
+                    <h3>Publicar Actividades</h3>
+                </a>
+                
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span> 
+                    <h3>Historial Actividades</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">insights</span> 
+                    <h3>Aprendiz</h3>
+                </a>
+
+
+
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span> 
+                    <h3>Solicitudes</h3>
+                    <!--AUI SON LAS NOTIFICACIONES VV-->
+                    <span class="message-count">20</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span> 
+                    <h3>Logout</h3>
+                </a>
+            </div>
+
+        </aside>
+
+    <!--AQUI ACABA LA BARRA DE NAVEGACION-->
+
+    <!--CONTENIDO PRINCIPAL-->
+        <main>
+           <h1>Perfil</h1> 
+           <div class="Perfil">
+            
+            <div id="Formulario-Perfil">
+                <h2>Datos Principales</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="rol">Rol:</label>
+                    <input type="text" id="rol" name="rol" value="ADMINISTRADOR PRINCIPAL" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" value="" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="tipoDocumento">Tipo de Documento</label>
+                    <input type="text" id="tipoDocumento" name="tipoDocumento" value="" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="documentoIdentidad">Documento de identidad</label>
+                    <input type="text" id="documentoIdentidad" name="documentoIdentidad" value="" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" id="cargo" name="cargo" value="" disabled>
+                  </div>
+                </form>
+              </div>
+              
+
+            </div>
+        </main>
+        <!--SECCION DE LA DERECHA-->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+                <div class="dark-mode" id="toggleDarkMode">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp ">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                       <p>Hola <b>Laura</b></p> 
+                       <div class="text-muted">BIENESTAR</div>
+                    </div>
+                    <div class="profile-photo">
+                       <img src="../IMG/Perfil (2).jpeg" > 
+                    </div>
+                </div>
+            </div>
+
+            <!-- FIN DE LA SECCION DE LA DERECHA (PERFIL)-->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="../IMG/logo.png" >
+                    <h2>Bienvenidos</h2>
+                    <p>Sube las actividades y aprueba solicitudes</p>
+
+                </div>
+            </div>
+            <div class="reminders">
+                <div class="header">
+                    <h2>Proximas Actividades</h2>
+                    <span class="material-icons-sharp">notifications_none</span>
+
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">event</span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Titulo de la actividad</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                                <br>
+                                10/03/2024 <br>
+                                4H
+                            </small>
+                            
+                        </div>
+                        <span class="material-icons-sharp">more_vert</span>
+
+                    </div>
+                </div>
+
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">event</span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>No se que poner</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM <br>
+                                10/03/2024<br>
+                                4H
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">more_vert</span>
+
+                    </div>
+                </div>
+
+            
+
+
+            
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+   <script src="../Js/ModoOscuro.js"></script> 
+   
+</body>
+</html>

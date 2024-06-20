@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#logoApolo {
+    padding-top: 15px;
+    height: 80PX;
+}
+
+img {
+    object-fit: cover;
+}
+
+body {
+    background-color: #f1f1f1;
+    background-image: url(/Imagenes/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+nav {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav a.logo {
+    font-size: 33px;
+    color: rgb(139, 44, 44);
+    font-weight: 600;
+}
+
+nav .link a:not(:last-child) {
+    margin-right: 20px;
+    margin-left: 5px; /* Nuevo */
+}
+
+nav .link{
+    font-size: 20px;
+}
+
+nav .link a:hover{
+    font-size: 22px;
+    box-shadow: none;
+    border-bottom: 4px solid rgb(139, 44, 44);
+    transition: all 0.3s ease;
+}
+
+nav .login button {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+nav .login button.signup {
+    background-color: #000;
+    font-size: 15px;
+    padding: 15px 60px 15px 60px;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 14px;
+}
+
+nav .login button.signup:hover {
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 62px 15px 62px;
+    background-color: rgb(139, 44, 44);
+    transition: all 0.5s ease;
+}
+
+header {
+    margin-left: 0;
+    padding-left: 0;
+    padding: 0 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .left {
+    width: 90%;
+
+}
+.informacion p {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 30px 45px 30px 45px;
+    margin-bottom: 20px;
+}
+.informacion p:hover{
+    box-shadow: none;
+}
+
+
+
+
+
+header .left h1 span {
+    color: rgb(139, 44, 44);
+    font-size: 50px;
+    padding: 0 50px;
+    font-weight: bolder;
+    margin: 40px;
+    gap: 30px;
+
+}
+
+header .left p {
+    margin: 40px 0;
+    color: #000;
+    font-size: 20px;
+    line-height: 24px; /* Añadir line-height para establecer el espaciado entre líneas */
+  
+    align-items: center;
+}
+
+
+
+header .left a span {
+    color: #fff;
+    margin-left: 10px;
+}
+
+header img {
+    width: 800px;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.righ{
+    width: 20%;
+}
+.righ img{
+    
+    width:  100%;
+    padding-right: 0;
+    margin-right: 0;
+}
+.listas {
+    display: flex;
+}
+.beneficios1{
+    width: 50%;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+}
+.beneficios:hover{
+    box-shadow: none;
+}
+.beneficios h5 {
+    color: rgb(139, 44, 44);
+    font-size: 30px;
+    padding: 0 35px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.beneficios li {
+    color: #000;
+    font-size: 20px;
+    padding-left: 24%;
+    padding-bottom: 12px;
+}
+.beneficios{
+    width: 50%;
+    font-size: 24px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-right: 25px;
+}
+.beneficios1:hover{
+    box-shadow: none;
+}
+.beneficios1 h5 {
+    color: rgb(139, 44, 44);
+    font-size: 30px;
+    padding: 0 35px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.beneficios1 li {
+    color: #000;
+    font-size: 20px;
+    padding-left: 24%;
+    padding-bottom: 12px;
+    
+}
+
+
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer h3{
+    font-size: 48px;
+}
+
+footer .right{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px;
+}
+
+footer .right .links{
+    display: flex;
+    gap: 30px;
+}
+
+footer .right .links a{
+    color: #989898;
+    transition: color 0.3s ease;
+}
+
+footer .right .links a:hover{
+    color: #fff;
+}
+
+footer .right .social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .right .social .logoSena{
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logoSena a{
+    width: 20px;
+    height: 20px;
+}
+
+footer .right p{
+    font-size: 13px;
+    color: #777;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-actividades,
+    .sellers{
+        padding: 0 40px;
+    }
+
+    header .left h1{
+        font-size: 50px;
+    }
+
+    header img{
+        width: 540px;
+    }
+
+    .nft-actividades .nft-list .item img{
+        width: 220px;
+        height: 220px;
+    }
+
+    footer{
+        padding: 100px 40px;
+    }
+
+    footer h3{
+        font-size: 38px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    header .left h1{
+        font-size: 48px;
+    }
+
+    header img{
+        width: 480px;
+    }
+
+    h2.separator{
+        font-size: 34px;
+    }
+
+    .sell-nft .item .header i{
+        font-size: 36px;
+    }
+
+    .sell-nft .item .header h5{
+        font-size: 15px;
+    }
+
+    .sell-nft .item p{
+        font-size: 13px;
+    }
+
+    .nft-actividades .nft-list{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .nft-actividades .nft-list .item{
+        width: 48%;
+    }
+
+    .nft-actividades .nft-list .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sellers{
+        flex-wrap: wrap;
+    }
+
+    .sellers .item{
+        width: 48%;
+    }
+
+    footer .links a{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav a.logo{
+        font-size: 28px;
+    }
+
+    nav .links a{
+        font-size: 14px;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    header .left{
+        width: 100%;
+    }
+
+    header img{
+        width: 100%;
+    }
+
+    .sell-nft{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sell-nft .item{
+        width: 48%;
+    }
+
+    .sellers{
+        gap: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+
+    footer h3{
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    footer .right{
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-actividades,
+    .sellers{
+        padding: 0 20px;
+    }
+    .nft-actividades .carousel-container  .item img{
+        margin-left: 25px;
+    }
+    nav a.logo{
+        display: none;
+    }
+
+    nav .links a{
+        font-size: 12px;
+    }
+
+    nav .login button{
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    header .left h1{
+        font-size: 36px;
+    }
+
+    header .left p{
+        font-size: 14px;
+    }
+    header .left .listas .beneficios li{
+        padding-top: 3px;
+        font-size: 14px;
+    }
+    header .left .listas .beneficios1 li{
+        padding-top: 3px;
+        font-size: 14px;
+    }
+    header .left a{
+        padding: 6px;
+        width: 160px;
+        font-size: 14px;
+    }
+
+    header .left a i{
+        padding: 6px;
+    }
+
+    h2.separator{
+        font-size: 30px;
+    }
+
+    footer{
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    header .left .informacion h1 span{
+        font-size: 30px;
+    }
+    header .left .listas .beneficios h5{
+        font-size: 20px;
+    }
+    header .left .listas .beneficios1 h5{
+        font-size: 20px;
+    }
+    header .left .listas .beneficios li{
+        padding-top: 3px;
+        font-size: 13px;
+    }
+    header .left .listas .beneficios1 li{
+        padding-top: 3px;
+        font-size: 13px;
+    }
+
+    .sell-nft .item{
+        width: 100%;
+    }
+    .nft-actividades .carousel-container  .item img{
+        margin-left: 40px;
+    }
+
+    .nft-actividades .nft-list .item,
+    .sellers .item{
+        width: 47%;
+    }
+
+    .nft-actividades .category a{
+        font-size: 13px;
+    }
+    .listas{
+        display:block;
+    }
+    .beneficios,.beneficios1{
+        padding-top: 2%;
+        padding-right: 4%;
+        padding-bottom: 2%;
+        margin-bottom: 8%;
+        margin-left: 20%;
+    }
+    nav .login button.signup {
+        background-color: #000;
+        font-size: 15px;
+        padding: 10px 15px 10px 15px;
+        color: #fff;
+        border-radius: 4px;
+        margin-right: 14px;
+    }
+    nav .link{
+        font-size: 15px;
+        font-weight:bolder;
+        line-height: 1.8;
+    }
+    .carousel-container {
+   
+        width: 235px;
+        height: 280px;
+        margin-left: 25%;   
+    }
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apolo Web - Inicio</title>
+    <link rel="icon" href="/Imagenes/logoIcono.ico">
+    <link rel="stylesheet" href="/Css/Codigo externo/reset.css">
+    <link rel="stylesheet" href="/Css/styleLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="Index.html" class="logo"><img id="logoApolo" src="/Imagenes/LogoHome.png"
+                alt="Es el logo de proyecto Apolo"></a>
+        <div class="link">
+            <a href="/Index.html">INICIO</a>
+            <a href="/Html/informacion.html">INFORMACION</a>
+            <a href="/Html/contacto.html">CONTACTO</a>
+        </div>
+        <div class="login">
+            <a href="/Html/login.html"><button class="signup" href="login.html">LOGIN</button></a>
+
+        </div>
+    </nav>
+    <div class="loginPrincipal">
+
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Cree su cuenta</h1>
+
+                    <span>Registrese con sus datos del sena</span>
+                    <div>
+                        <select id="tipoUsuario" name="tipoUsuario" required onchange="toggleFichaInput()">
+                            <option value="">Selecciona un tipo de usuario</option>
+                            <option value="aprendiz">Aprendiz</option>
+                            <option value="bienestar">Bienestar</option>
+                        </select>
+                    </div>
+                    <select id="tipoDocumento" name="tipoDocumento" required>
+                        <option value="">Selecciona un tipo de documento</option>
+                        <option value="cedula">Cédula de Ciudadanía</option>
+                        <option value="tarjeta">Tarjeta de Identidad</option>
+                        <option value="extranjeria">Cédula de Extranjería</option>
+                        <option value="pasaporte">Pasaporte</option>
+                    </select>
+                    <input type="text" id="documento" name="documento" placeholder="Nº De Documento" required pattern="[0-9]+" title="Por favor, ingresa solo números." />
+                    <input type="text" id="nombres" name="nombres" placeholder="Nombres" required />
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required />
+                    <input type="text" id="ficha" name="ficha" placeholder="Número de Ficha (Ej. 2562074A o 2562074)" required pattern="[0-9]{7,8}[A-Z]?" title="Por favor, ingrese un número de ficha válido de 7 u 8 dígitos opcionalmente seguido por una letra." />
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de Teléfono (Ej. 3225821234)" required pattern="[0-9]{10}" title="Por favor, ingrese un número de teléfono válido en formato colombiano de 10 dígitos." />
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Por favor, Ingrese una dirección de correo electrónico válida." />
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un número y un carácter especial." />
+                    <button>REGISTRATE</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form>
+                    <img  class="ApoloIniciar" src="/Imagenes/logo.png" alt="">
+                    <h1>Iniciar sesíon</h1>
+
+                    <span>Use su numero de documento y contraseña</span>
+                    <div>
+                        <select id="tipoUsuario" name="tipoUsuario" required onchange="toggleFichaInput()">
+                            <option value="">Selecciona un tipo de usuario</option>
+                            <option value="aprendiz">Aprendiz</option>
+                            <option value="bienestar">Bienestar</option>
+                        </select>
+                    </div>
+                    <input type="text" id="documento" name="documento" placeholder="Nº De Documento" required pattern="[0-9]+" title="Por favor, Ingrese solo números." />
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="La contraseña debe contener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una letra minúscula, un número y un carácter especial." />
+                    <a href="#">¿Olvido su contraseña?</a>
+                    <button>INICIAR SESÍON</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>¡Bienvenido de nuevo a Apolo!</h1>
+                        <p>Ingrese sus datos personales para utilizar todas las funciones de Apolo</p>
+                        <button class="hidden" id="login">INICIAR SESÍON</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hola bienvenido Apolo!</h1>
+                        <p>Registrese con sus datos del Sena y utlize todo el contenido de Apolo</p>
+                        <button class="hidden" id="register">REGISTRESE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Graduate, acumula tus horas & se Profesional Con Apolo</h3>
+        <div class="right">
+            <div class="links">
+                <a href="#">Politica de Privacidad</a>
+                <a href="#">Habeas Data</a>
+                <a href="#">Manual De Usuario</a>
+                <a href="contacto.html">Contactanos</a>
+            </div>
+            <div class="social">
+                <a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/" class="logoSena"><img id="logoSofia"
+                        src="/Imagenes/logoSofia.png" alt="Es el logo de sena sofia"></a>
+                <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" class="logoSena"><img id="logoSofia"
+                        src="/Imagenes/logoSena.png" alt="Es el logo de sena"></a>
+            </div>
+            <p>Copyright © 2024 Apolo, Grupos Apolo.</p>
+        </div>
+    </footer>
+    <script src="/JavaScript/jsLogin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#logoApolo {
+    padding-top: 15px;
+    height: 80PX;
+}
+
+img {
+    object-fit: cover;
+}
+
+body {
+    background-color: #f1f1f1;
+
+}
+
+nav {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    
+}
+
+nav a.logo {
+    font-size: 33px;
+    color: rgb(139, 44, 44);
+    font-weight: 600;
+}
+
+nav .link a:not(:last-child) {
+    margin-right: 20px;
+}
+nav .link{
+    font-size: 20px;
+}
+nav .link a:hover{
+    font-size: 22px;
+    box-shadow: none;
+    border-bottom: 4px solid rgb(139, 44, 44);
+    transition: all 0.3s ease;
+}
+
+
+
+nav .login button {
+    padding: 8px 14px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+nav .login button.signup {
+    background-color: rgb(139, 44, 44);
+    font-size: 15px;
+    padding: 15px 60px 15px 60px;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 14px;
+}
+
+nav .login button.signup:hover {
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 62px 15px 62px;
+    background-color: rgb(139, 44, 44);
+    transition: all 0.5s ease;
+}
+.loginPrincipal{
+    display: flex;
+    width: 100%;
+
+}
+
+
+
+.loginPrincipal .container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 600px;
+    max-width: 100%;
+    min-height: 480px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.loginPrincipal .container .toggle-right p{
+    width: 75%;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 15% 3px 10%;
+}
+.loginPrincipal .container .toggle-left p{
+    width: 75%;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 15% 3px 10%;
+   
+}
+
+.loginPrincipal .container span{
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.loginPrincipal .container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.loginPrincipal .container button{
+    background-color: rgb(139, 44, 44);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.loginPrincipal .container button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.loginPrincipal .container form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+.loginPrincipal .container form h1{
+    font-size: 35px;
+    
+}
+.loginPrincipal .container form span{
+    font-size: 15px;
+}
+#ficha {
+    display: none;
+}
+
+
+.loginPrincipal .container input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+.loginPrincipal .container select {
+    background-color: #eee;
+    border: none;
+    margin: 5px 0;
+    padding: 12px 12px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+.ApoloIniciar{
+    margin-right: 25%;
+    margin-left: 25%;
+    width: 50%;
+    
+}
+.loginPrincipal .form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.loginPrincipal .sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.loginPrincipal .container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.loginPrincipal .sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.loginPrincipal .container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+
+
+.loginPrincipal .toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.loginPrincipal .container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.loginPrincipal .toggle{
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right, rgb(139, 44, 44), rgb(139, 44, 44));
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.loginPrincipal .container.active .toggle{
+    transform: translateX(50%);
+}
+
+.loginPrincipal .toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.loginPrincipal .toggle-left{
+    transform: translateX(-200%);
+}
+
+.loginPrincipal .container.active .toggle-left{
+    transform: translateX(0);
+}
+
+
+.loginPrincipal .toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.loginPrincipal .container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer h3{
+    font-size: 48px;
+}
+
+footer .right{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px;
+}
+
+footer .right .links{
+    display: flex;
+    gap: 30px;
+}
+
+footer .right .links a{
+    color: #989898;
+    transition: color 0.3s ease;
+}
+
+footer .right .links a:hover{
+    color: #fff;
+}
+
+footer .right .social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .right .social .logoSena{
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logoSena a{
+    width: 20px;
+    height: 20px;
+}
+
+footer .right p{
+    font-size: 13px;
+    color: #777;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-actividades,
+    .sellers{
+        padding: 0 40px;
+    }
+
+    header .left h1{
+        font-size: 60px;
+    }
+
+    header img{
+        width: 540px;
+    }
+
+    .nft-actividades .nft-list .item img{
+        width: 220px;
+        height: 220px;
+    }
+
+    footer{
+        padding: 100px 40px;
+    }
+
+    footer h3{
+        font-size: 38px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    header .left h1{
+        font-size: 48px;
+    }
+
+    header img{
+        width: 480px;
+    }
+
+    h2.separator{
+        font-size: 34px;
+    }
+
+    .sell-nft .item .header i{
+        font-size: 36px;
+    }
+
+    .sell-nft .item .header h5{
+        font-size: 15px;
+    }
+
+    .sell-nft .item p{
+        font-size: 13px;
+    }
+
+    .nft-actividades .nft-list{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .nft-actividades .nft-list .item{
+        width: 48%;
+    }
+
+    .nft-actividades .nft-list .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sellers{
+        flex-wrap: wrap;
+    }
+
+    .sellers .item{
+        width: 48%;
+    }
+
+    footer .links a{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav a.logo{
+        font-size: 28px;
+    }
+
+    nav .links a{
+        font-size: 14px;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    header .left{
+        width: 100%;
+    }
+
+    header img{
+        width: 100%;
+    }
+
+    .sell-nft{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .sell-nft .item{
+        width: 48%;
+    }
+
+    .sellers{
+        gap: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+
+    footer h3{
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    footer .right{
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .sell-nft,
+    .nft-actividades,
+    .sellers{
+        padding: 0 20px;
+    }
+    .nft-actividades .carousel-container  .item img{
+        margin-left: 25px;
+    }
+    .loginPrincipal .container {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        
+        margin-left: 4px;
+        margin-right: 4px; /* Elimina el redondeo de los bordes */
+    }
+    nav a.logo{
+        display: none;
+    }
+
+    nav .links a{
+        font-size: 12px;
+    }
+
+    nav .login button{
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    header .left h1{
+        font-size: 36px;
+    }
+
+    header .left p{
+        font-size: 14px;
+    }
+
+    header .left a{
+        padding: 6px;
+        width: 160px;
+        font-size: 14px;
+    }
+
+    header .left a i{
+        padding: 6px;
+    }
+
+    h2.separator{
+        font-size: 30px;
+    }
+
+    footer{
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    header .left h1{
+        font-size: 30px;
+    }
+
+    .sell-nft .item{
+        width: 100%;
+    }
+    .nft-actividades .carousel-container  .item img{
+        margin-left: 40px;
+    }
+
+    .nft-actividades .nft-list .item,
+    .sellers .item{
+        width: 47%;
+    }
+
+    .nft-actividades .category a{
+        font-size: 13px;
+    }
+    nav .login button.signup {
+        background-color: #000;
+        font-size: 15px;
+        padding: 10px 15px 10px 15px;
+        color: #fff;
+        border-radius: 4px;
+        margin-right: 14px;
+    }
+    nav .link{
+        font-size: 15px;
+        font-weight:bolder;
+        line-height: 1.8;
+    }
+    .loginPrincipal .container {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        
+        margin-left: 4px;
+        margin-right: 4px; /* Elimina el redondeo de los bordes */
+    }
+    .loginPrincipal .container form h1{
+        font-size: 20px;
+        
+    }
+
+    .loginPrincipal .container .toggle-right p{
+       margin-left: 25px;
+       margin-right: 0;
+        font-size: 9px;
+        
+    }
+    .loginPrincipal .container .toggle-left p{
+        font-size: 9px;
+        margin-left: 20px;
+       margin-right: 25;
+    }
+    .toggle h1{
+        font-size: 10px;
+    }
+    
+    .loginPrincipal .container span{
+        font-size: 9px;
+        margin-bottom: 12px;
+    }
+    
+    .loginPrincipal .container a{
+        color: #333;
+        font-size: 13px;
+        text-decoration: none;
+        margin: 15px 0 10px;
+    }
+    .loginPrincipal .container button{
+       
+        font-size: 9px;
+        padding: 5px 22px;
+        
+        
+        
+        
+    }
+    .loginPrincipal .form-container form span{
+        font-size: 12px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+    
+   
+    
+  
+
+}
