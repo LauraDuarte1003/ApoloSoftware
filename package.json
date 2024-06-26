@@ -1,7 +1,7 @@
 {
   "name": "apolosoftware",
   "version": "1.0.0",
-  "main": "Index.html",
+  "main": " ",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
