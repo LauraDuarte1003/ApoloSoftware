@@ -387,6 +387,80 @@ main.main2 .ActivRecet .item .bid a:hover {
 }
 
 /*Termina publicar actividad*/
+/*MODAL*/
+/* Estilo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Posición fija */
+  z-index: 1; /* Sobre otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con transparencia */
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  margin: 15% auto; /* 15% desde la parte superior y centrado horizontalmente */
+  padding: 20px;
+  border: 1px solid ;
+  border-color: var(--color-danger);
+  width: 80%; /* Podrías ajustar el tamaño según sea necesario */
+  max-width: 500px; /* Máximo ancho */
+  border-radius: var(--border-radius-1); /* Borde redondeado */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid ;
+  border-color: var(--color-primary);
+  border-radius: var(--border-radius-1);
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--color-danger);
+}
+
+
+
+
+
 
   /* Media Queries for Responsive Layout */
 @media (max-width: 768px) {
