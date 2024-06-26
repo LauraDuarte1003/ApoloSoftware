@@ -268,9 +268,10 @@ main {
     display: block;
   }
 
-/*Publicar actividad*/main.main2 {
+/*Publicar actividad*/
+main.main2 {
   width: 100%; /* Asegura que main2 ocupe todo el ancho disponible */
-  grid-column:  2/ span 1; /* Esto depende de tu grid-template-columns en el contenedor principal */
+  grid-column: 2 / span 1; /* Esto depende de tu grid-template-columns en el contenedor principal */
   display: flex;
   flex-direction: column;
 }
@@ -280,36 +281,22 @@ main.main2 .Publicar {
   justify-content: space-between; /* Espacia los elementos para que uno esté a la izquierda y el otro a la derecha */
   align-items: center; /* Centra los elementos verticalmente */
   gap: 1.6rem;
-  width: 100%; 
-}
-main.main2 .Publicar h2{
-  font-size: 1.3rem;
-  font-weight: 1rem;
-}
-
-main.main2 .Publicar > div {
+  width: 100%;
   background-color: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  flex: 1; /* Los elementos se estiran para llenar el espacio disponible */
+
 }
 
-main.main2 .Publicar > div.PublicActiv {
-  flex-grow: 3; /* PublicActiv tomará más espacio disponible */
+main.main2 .Publicar h2 {
+  font-size: 1.3rem;
+  font-weight: bold; /* Cambié a bold para que funcione correctamente */
+  margin: 0; /* Asegura que no haya márgenes adicionales */
 }
 
-main.main2 .Publicar > div.BtnPublic {
-  flex-grow: 1; /* BtnPublic tomará menos espacio disponible */
-  display: flex;
-  justify-content: center; /* Centra el botón horizontalmente */
-  align-items: center; /* Centra el botón verticalmente */
-}
-
-main.main2 .BtnPublic button {
+main.main2 .Publicar button {
   padding: 0.8rem 1.6rem; /* Ajusta el padding del botón */
   font-size: 1rem; /* Ajusta el tamaño de la fuente del botón */
   border-radius: var(--border-radius-1); /* Aplica el borde redondeado */
@@ -319,10 +306,16 @@ main.main2 .BtnPublic button {
   transition: background-color 0.3s ease;
 }
 
-main.main2 .BtnPublic button:hover {
+main.main2 .Publicar button:hover {
   background-color: darken(var(--color-primary), 10%); /* Color de fondo más oscuro al hacer hover */
 }
 
+
+/*INICIA ACTIVIDADES RECIENTES */
+
+main.main2 .ActivRecet {
+  margin-top: 1rem;
+}
 /*Termina publicar actividad*/
 
   /* Media Queries for Responsive Layout */
