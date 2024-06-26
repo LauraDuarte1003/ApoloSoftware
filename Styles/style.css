@@ -269,7 +269,23 @@ main {
   }
 
 /*Publicar actividad*/
-
+main.main2 .Publicar{
+  display: grid;
+  gap: 1.6rem;
+  ;
+}
+main.main2 .Publicar > div{
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main.main2 .Publicar > div:hover{
+  box-shadow: none;
+}
 /*Termina publicar actividad*/
 
   /* Media Queries for Responsive Layout */
