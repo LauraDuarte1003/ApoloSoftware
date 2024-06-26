@@ -275,6 +275,14 @@ main.main2 {
   display: flex;
   flex-direction: column;
 }
+main.main2 h3 {
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.0rem;
+  font-weight: bold; /* Se agrega la propiedad font-weight con valor bold */
+}
+
 
 main.main2 .Publicar {
   display: flex;
@@ -287,7 +295,12 @@ main.main2 .Publicar {
   border-radius: var(--card-border-radius);
   margin-top: 1rem;
   box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
 
+
+}
+main.main2 .Publicar:hover{
+box-shadow: none;
 }
 
 main.main2 .Publicar h2 {
@@ -307,15 +320,72 @@ main.main2 .Publicar button {
 }
 
 main.main2 .Publicar button:hover {
-  background-color: darken(var(--color-primary), 10%); /* Color de fondo más oscuro al hacer hover */
+  background-color: var(--color-danger); /* Color de fondo más oscuro al hacer hover */
 }
 
 
 /*INICIA ACTIVIDADES RECIENTES */
 
 main.main2 .ActivRecet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 1.6rem; /* Espacio entre las columnas */
   margin-top: 1rem;
+  
 }
+
+main.main2 .ActivRecet .item {
+  background-color: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Espacio entre los elementos dentro del item */
+  transition: all 0.3s ease;
+
+}
+main.main2 .ActivRecet .item:hover{
+  box-shadow: none;
+}
+
+main.main2 .ActivRecet .item img.imgDeporte {
+  width: 100%;
+  border-radius: var(--card-border-radius);
+}
+
+main.main2 .ActivRecet .item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main.main2 .ActivRecet .item .info .btc {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main.main2 .ActivRecet .item .bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main.main2 .ActivRecet .item .bid a {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-1);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+main.main2 .ActivRecet .item .bid a:hover {
+  background-color: darken(var(--color-primary), 10%);
+}
+
 /*Termina publicar actividad*/
 
   /* Media Queries for Responsive Layout */
