@@ -23,7 +23,7 @@ img {
 
 body {
     background-color: #f1f1f1;
-    background-image: url(/./IMG/fondo.png);
+    background-image: url(/public/IMG/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
