@@ -267,11 +267,6 @@ main {
   main .Perfil span {
     display: block;
   }
-
-/*Publicar actividad*/
-
-/*Termina publicar actividad*/
-
   /* Media Queries for Responsive Layout */
 @media (max-width: 768px) {
     main .Perfil > div #Formulario-Perfil {
